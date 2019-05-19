@@ -6,9 +6,73 @@ html, body {
 .left {
   float: left;
   display: inline-block;
-  background-color: lightgray;
   height: 100%;
   width: 30%;
+
+  .address-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 1px 2px 1px rgba(0,0,0,.15), 0 2px 5px -3px rgba(0,0,0,.15);
+
+    #address-input {
+      width: 80%;
+      height: 30px;
+      padding: 5px;
+      font-size: 17px;
+      border: 1px solid transparent;
+      transition: .3s;
+
+      &:focus {
+        border: 1px solid #ffdb4d;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+
+    #route {
+      width: 20%;
+      background-color: #ffdb4d;
+      border: none;
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .list {
+    margin-top: 20px;
+    list-style: none;
+    padding: 10px;
+    font-family: sans-serif;
+
+    .geoObject {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+
+      .name {
+        margin: 0 0 5px;
+      }
+
+      .delete {
+        background-color: #ffdb4d;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    width: 40%;
+  }
 
   @media (max-width: 767px) {
     width: 100%;
@@ -22,6 +86,10 @@ html, body {
   background-color: black;
   height: 100%;
   width: 70%;
+
+  @media (max-width: 992px) {
+    width: 60%;
+  }
 
   @media (max-width: 767px) {
     width: 100%;
